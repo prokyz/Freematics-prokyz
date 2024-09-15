@@ -397,6 +397,8 @@ public:
         sys.reactivateLink();
         //ESP.restart();
         clearState(STATE_STANDBY);
+        // start GPS
+        sys.gpsBegin();
     }
 #if USE_GNSS > 1
     bool cellSendCommand(const char* cmd, char* buf, int bufsize, const char* expected = "\r\nOK", unsigned int timeout = 1000)
