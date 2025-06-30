@@ -47,11 +47,16 @@
 #endif
 
 // enable(1)/disable(0) BLE SPP server (for Freematics Controller App).
-#define ENABLE_BLE 0
+#define ENABLE_BLE 1
 
+/**************************************
+* Parameters
+**************************************/
+// stats update interval
+#define STATS_INTERVAL 500
+// OBD retry interval
+#define OBD_RETRY_INTERVAL 3000
 // GPS parameters
 #define GPS_SERIAL_BAUDRATE 115200L
 // motion detection
 #define WAKEUP_MOTION_THRESHOLD 0.3 /* G */
-// minimum loop time
-#define MIN_LOOP_TIME 100 /* ms */
