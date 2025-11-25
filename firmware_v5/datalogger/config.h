@@ -59,4 +59,4 @@
 // GPS parameters
 #define GPS_SERIAL_BAUDRATE 115200L
 // motion detection
-#define WAKEUP_MOTION_THRESHOLD 0.3 /* G */
+#define WAKEUP_MOTION_THRESHOLD 0.2 /* G */
