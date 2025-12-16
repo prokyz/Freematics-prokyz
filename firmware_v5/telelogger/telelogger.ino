@@ -949,6 +949,9 @@ void telemetry(void* inst)
         if (!initCell() || !teleClient.connect()) {
           teleClient.cell.end();
           state.clear(STATE_NET_READY | STATE_CELL_CONNECTED);
+          Serial.println("[CELL] Deactivated");
+          // avoid turning on/off cellular module too frequently to avoid operator banning
+          delay(60000 * 3);
           break;
         }
         Serial.println("[CELL] In service");
