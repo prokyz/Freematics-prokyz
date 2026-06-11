@@ -73,6 +73,7 @@ extern "C" {
 #define PIN_MOLEX_VCC 12
 
 #define UART_BUF_SIZE 256
+#define GPS_UART_BUF_SIZE 4096
 #define NMEA_BUF_SIZE 512
 
 #define FLAG_USE_CELL 0x2

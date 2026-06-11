@@ -533,7 +533,7 @@ bool FreematicsESP32::gpsBeginExt(int baudrate)
         // set UART pins
         uart_set_pin(gpsUARTNum, pinGPSTx, pinGPSRx, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
         // install UART driver
-        uart_driver_install(gpsUARTNum, UART_BUF_SIZE, 0, 0, NULL, 0);
+        uart_driver_install(gpsUARTNum, GPS_UART_BUF_SIZE, 0, 0, NULL, 0);
         // apply GNSS settings
         delay(300);
         gpsSendCommand(gpsSettings, sizeof(gpsSettings));
